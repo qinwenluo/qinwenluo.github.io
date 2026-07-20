@@ -10,6 +10,10 @@ institution = "Nanjing University of Aeronautics and Astronautics"
 avatar = "/bio.jpg"
 
 [social]
+email = "luoqw8@nuaa.edu.cn"
+google_scholar = "https://scholar.google.com/citations?user=_tK52D4AAAAJ&hl=en"
+orcid = "https://orcid.org/0009-0005-9606-466X"
+wechat = "/wechat.png"
 github = "https://github.com/QinwenLuo"
 
 [features]

@@ -11,7 +11,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { MapPinIcon as MapPinSolidIcon, EnvelopeIcon as EnvelopeSolidIcon } from '@heroicons/react/24/solid';
 import { HeartIcon as HeartSolidIcon } from '@heroicons/react/24/solid';
-import { Github, Linkedin, Pin } from 'lucide-react';
+import { Github, Linkedin, MessageCircle, Pin, X } from 'lucide-react';
 import type { SiteConfig } from '@/lib/config';
 import { useMessages } from '@/lib/i18n/useMessages';
 
@@ -43,6 +43,7 @@ export default function Profile({ author, social, features, researchInterests }:
     const [isAddressPinned, setIsAddressPinned] = useState(false);
     const [showEmail, setShowEmail] = useState(false);
     const [isEmailPinned, setIsEmailPinned] = useState(false);
+    const [showWechat, setShowWechat] = useState(false);
     const [lastClickedTooltip, setLastClickedTooltip] = useState<'email' | 'address' | null>(null);
 
     // Check local storage for user's like status
@@ -54,6 +55,17 @@ export default function Profile({ author, social, features, researchInterests }:
             setHasLiked(true);
         }
     }, [features.enable_likes]);
+
+    useEffect(() => {
+        if (!showWechat) return;
+
+        const handleEscape = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') setShowWechat(false);
+        };
+
+        window.addEventListener('keydown', handleEscape);
+        return () => window.removeEventListener('keydown', handleEscape);
+    }, [showWechat]);
 
     const handleLike = () => {
         const newLikedState = !hasLiked;
@@ -269,7 +281,7 @@ export default function Profile({ author, social, features, researchInterests }:
                                                         </div>
                                                     )}
                                                 </div>
-                                                <p className="break-words">{social.email?.replace('@', ' (at) ')}</p>
+                                                <p className="break-words">{social.email}</p>
                                                 <div className="mt-2">
                                                     <a
                                                         href={link.href}
@@ -301,7 +313,67 @@ export default function Profile({ author, social, features, researchInterests }:
                         </a>
                     );
                 })}
+                {social.wechat && (
+                    <button
+                        type="button"
+                        onClick={() => setShowWechat(true)}
+                        className="p-2 sm:p-2 text-neutral-600 dark:text-neutral-400 hover:text-accent transition-colors duration-200"
+                        aria-label={messages.profile.wechat}
+                        aria-haspopup="dialog"
+                    >
+                        <MessageCircle className="h-5 w-5" />
+                    </button>
+                )}
             </div>
+
+            <AnimatePresence>
+                {showWechat && social.wechat && (
+                    <motion.div
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/55 p-4"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setShowWechat(false)}
+                    >
+                        <motion.div
+                            role="dialog"
+                            aria-modal="true"
+                            aria-labelledby="wechat-dialog-title"
+                            initial={{ opacity: 0, y: 16, scale: 0.96 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 16, scale: 0.96 }}
+                            onClick={(event) => event.stopPropagation()}
+                            className="relative w-full max-w-sm rounded-2xl bg-white dark:bg-neutral-900 p-5 shadow-2xl"
+                        >
+                            <button
+                                type="button"
+                                onClick={() => setShowWechat(false)}
+                                className="absolute right-3 top-3 rounded-full p-2 text-neutral-500 hover:bg-neutral-100 hover:text-accent dark:hover:bg-neutral-800"
+                                aria-label={messages.profile.close}
+                            >
+                                <X className="h-5 w-5" />
+                            </button>
+                            <div className="px-3 pt-3 text-center">
+                                <h2 id="wechat-dialog-title" className="text-xl font-serif font-bold text-primary">
+                                    {messages.profile.wechat}
+                                </h2>
+                                <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">
+                                    {messages.profile.wechatWelcome}
+                                </p>
+                            </div>
+                            <div className="mt-4 overflow-hidden rounded-xl border border-neutral-200 bg-white dark:border-neutral-700">
+                                <Image
+                                    src={social.wechat}
+                                    alt="WeChat QR code"
+                                    width={598}
+                                    height={628}
+                                    className="h-auto w-full"
+                                />
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Research Interests */}
             {researchInterests && researchInterests.length > 0 && (
