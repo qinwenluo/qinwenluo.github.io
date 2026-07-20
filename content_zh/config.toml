@@ -1,0 +1,24 @@
+[site]
+title = "Qinwen Luo"
+description = "南京航空航天大学博士生罗秦文的个人学术主页。"
+last_updated = "2026年7月21日"
+
+[author]
+name = "Qinwen Luo"
+title = "博士生"
+institution = "南京航空航天大学"
+
+[social]
+github = "https://github.com/QinwenLuo"
+
+[[navigation]]
+title = "关于我"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "代表性论文"
+type = "page"
+target = "publications"
+href = "/publications"

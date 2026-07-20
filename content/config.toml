@@ -1,0 +1,43 @@
+[site]
+title = "Qinwen Luo"
+description = "Academic homepage of Qinwen Luo, a Ph.D. student at NUAA researching reinforcement learning, large models, and embodied intelligence."
+favicon = "/favicon.svg"
+last_updated = "July 21, 2026"
+
+[author]
+name = "Qinwen Luo"
+title = "Ph.D. Student"
+institution = "Nanjing University of Aeronautics and Astronautics"
+avatar = "/bio.jpg"
+
+[social]
+github = "https://github.com/QinwenLuo"
+
+[features]
+enable_likes = false
+enable_one_page_mode = false
+
+[i18n]
+enabled = true
+locales = ["zh", "en"]
+default_locale = "en"
+mode = "fixed"
+fixed_locale = "en"
+persist = true
+switcher = true
+
+[i18n.labels]
+zh = "中文"
+en = "English"
+
+[[navigation]]
+title = "About"
+type = "page"
+target = "about"
+href = "/"
+
+[[navigation]]
+title = "Selected Publications"
+type = "page"
+target = "publications"
+href = "/publications"

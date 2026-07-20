@@ -1,43 +1,16 @@
 # Qinwen Luo — Academic Homepage
 
-Source for Qinwen Luo's academic homepage:
-[`qinwenluo.github.io`](https://qinwenluo.github.io).
+Source for [qinwenluo.github.io](https://qinwenluo.github.io), built directly on the open-source [PRISM](https://github.com/xyjoey/PRISM) academic homepage template.
 
-The visual direction combines the editorial academic structure of
-[ntdxyg.github.io](https://ntdxyg.github.io/) with the refined typography and
-modular presentation of [PRISM](https://github.com/xyjoey/PRISM), using an
-original light mint, fog blue, and warm ivory system.
+Profile content is maintained in `content/` and `content_zh/`; publications are stored in `content/publications.bib`.
 
 ## Local development
 
-Requirements: Node.js 22+ and pnpm.
-
 ```bash
-pnpm install
-pnpm exec next dev
+npm install
+npm run dev
 ```
 
-Open `http://localhost:3000`.
+## Deployment
 
-## Verify the production site
-
-```bash
-pnpm run build
-pnpm run lint
-```
-
-The build produces a fully static site in `out/`.
-
-## GitHub Pages
-
-The workflow in `.github/workflows/deploy.yml` deploys every push to `main`.
-For the exact URL `https://qinwenluo.github.io`, this repository must be named
-`QinwenLuo.github.io` and belong to the GitHub account `QinwenLuo`. In the
-repository's Settings → Pages, choose **GitHub Actions** as the source.
-
-## Updating content
-
-- Profile and homepage content: `app/page.tsx`
-- Colors, typography, and responsive layout: `app/globals.css`
-- SEO and social sharing metadata: `app/layout.tsx`
-- Portrait and social card: `public/profile.png`, `public/og.png`
+Every push to `main` is built and deployed through GitHub Actions.
