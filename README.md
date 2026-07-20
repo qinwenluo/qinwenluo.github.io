@@ -1,7 +1,7 @@
 # Qinwen Luo — Academic Homepage
 
-Source for Qinwen Luo's academic homepage, designed for
-[`luoqw.github.io`](https://luoqw.github.io).
+Source for Qinwen Luo's academic homepage:
+[`qinwenluo.github.io`](https://qinwenluo.github.io).
 
 The visual direction combines the editorial academic structure of
 [ntdxyg.github.io](https://ntdxyg.github.io/) with the refined typography and
@@ -31,9 +31,9 @@ The build produces a fully static site in `out/`.
 ## GitHub Pages
 
 The workflow in `.github/workflows/deploy.yml` deploys every push to `main`.
-For the exact URL `https://luoqw.github.io`, this repository must be named
-`luoqw.github.io` and belong to the GitHub account `luoqw`. In the repository's
-Settings → Pages, choose **GitHub Actions** as the source.
+For the exact URL `https://qinwenluo.github.io`, this repository must be named
+`QinwenLuo.github.io` and belong to the GitHub account `QinwenLuo`. In the
+repository's Settings → Pages, choose **GitHub Actions** as the source.
 
 ## Updating content
 

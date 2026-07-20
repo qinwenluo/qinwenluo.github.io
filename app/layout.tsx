@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://luoqw.github.io"),
+  metadataBase: new URL("https://qinwenluo.github.io"),
   title: "Qinwen Luo | Reinforcement Learning Researcher",
   description:
     "Academic homepage of Qinwen Luo — research in offline reinforcement learning, offline-to-online adaptation, and efficient LLM reasoning.",
-  authors: [{ name: "Qinwen Luo", url: "https://luoqw.github.io" }],
+  authors: [{ name: "Qinwen Luo", url: "https://qinwenluo.github.io" }],
   keywords: [
     "Qinwen Luo",
     "offline reinforcement learning",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: "Qinwen Luo | Academic Homepage",
     description:
       "Research in reliable reinforcement learning and efficient LLM reasoning.",
-    url: "https://luoqw.github.io",
+    url: "https://qinwenluo.github.io",
     siteName: "Qinwen Luo",
     type: "website",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
