@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://qinwenluo.github.io"),
-  title: "Qinwen Luo | Reinforcement Learning Researcher",
+  title: "Qinwen Luo | Ph.D. Student",
   description:
     "Academic homepage of Qinwen Luo, a Ph.D. student at NUAA researching reinforcement learning, large models, and embodied intelligence.",
   authors: [{ name: "Qinwen Luo", url: "https://qinwenluo.github.io" }],

@@ -2,6 +2,7 @@ import Image from "next/image";
 
 const publications = [
   {
+    index: "J3",
     year: "2026",
     venue: "KDD 2026",
     title:
@@ -12,10 +13,10 @@ const publications = [
       "Difficulty-aware entropy regularization that shortens reasoning on easy problems while preserving exploration on hard ones.",
     paper: "https://arxiv.org/abs/2602.22642",
     code: "https://github.com/QinwenLuo/CEEH",
-    tone: "mint",
-    short: "CEEH",
+    tags: ["LLM Reasoning", "Reinforcement Learning"],
   },
   {
+    index: "J2",
     year: "2025",
     venue: "ICML 2025",
     title:
@@ -25,10 +26,10 @@ const publications = [
       "State-adaptive regularization for balancing Bellman-driven learning and conservative offline RL updates.",
     paper: "https://arxiv.org/abs/2505.19923",
     code: "https://github.com/QinwenLuo/SSAR",
-    tone: "blue",
-    short: "SSAR",
+    tags: ["Offline RL", "Regularization"],
   },
   {
+    index: "J1",
     year: "2024",
     venue: "NeurIPS 2024",
     title:
@@ -38,26 +39,22 @@ const publications = [
       "A general offline-to-online framework that reconstructs the critic before stable constrained fine-tuning.",
     paper: "https://arxiv.org/abs/2412.18855",
     code: "https://github.com/QinwenLuo/OCR-CFT",
-    tone: "peach",
-    short: "OCR-CFT",
+    tags: ["Offline-to-Online RL", "Policy Fine-Tuning"],
   },
 ];
 
 const interests = [
   {
-    number: "01",
     title: "Offline & Skill-based RL",
-    text: "Reinforcement learning settings with strong potential for real-world use, including offline RL and skill-based RL.",
+    text: "Practical reinforcement learning from fixed datasets, reusable skills, and limited online interaction.",
   },
   {
-    number: "02",
     title: "RL for Large Models",
-    text: "Reinforcement learning for large models, with an emphasis on effective algorithms and emerging learning paradigms.",
+    text: "Reinforcement learning algorithms for large models, efficient reasoning, and emerging training paradigms.",
   },
   {
-    number: "03",
     title: "Embodied Intelligence",
-    text: "The intersection of reinforcement learning and embodied agents, including VLA and WAM models.",
+    text: "Connecting reinforcement learning with agents that perceive and act, including VLA and WAM models.",
   },
 ];
 
@@ -67,10 +64,7 @@ function Arrow() {
 
 export default function Home() {
   return (
-    <main>
-      <div className="ambient ambient-one" />
-      <div className="ambient ambient-two" />
-
+    <main id="top">
       <nav className="topbar" aria-label="Primary navigation">
         <a className="wordmark" href="#top" aria-label="Qinwen Luo home">
           Qinwen Luo
@@ -78,186 +72,142 @@ export default function Home() {
         <div className="navlinks">
           <a href="#about">About</a>
           <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
+          <a className="active" href="#publications">Selected Publications</a>
+          <a href="https://github.com/QinwenLuo" target="_blank" rel="noreferrer">
+            GitHub
+          </a>
         </div>
-        <a
-          className="nav-cta"
-          href="https://github.com/QinwenLuo"
-          target="_blank"
-          rel="noreferrer"
-        >
-          GitHub <Arrow />
-        </a>
       </nav>
 
-      <div className="page-shell" id="top">
-        <aside className="profile-column">
-          <div className="profile-card">
-            <div className="portrait-wrap">
-              <Image
-                src="/profile.jpg"
-                alt="Qinwen Luo"
-                className="portrait"
-                width="520"
-                height="520"
-                priority
-              />
-              <span className="status-dot" title="Open to research conversations" />
-            </div>
-            <p className="eyebrow">Ph.D. Student</p>
+      <div className="page-shell">
+        <section className="intro" id="about">
+          <aside className="profile">
+            <Image
+              src="/profile.jpg"
+              alt="Portrait of Qinwen Luo"
+              className="portrait"
+              width={420}
+              height={420}
+              priority
+            />
             <h1>Qinwen Luo</h1>
-            <p className="profile-note profile-quote">
-              “<em>认清</em>你之<em>所是</em>，<em>成为</em>你之<em>所是</em>。”
+            <p className="role">Ph.D. Student</p>
+            <p className="affiliation">
+              Nanjing University of Aeronautics and Astronautics
             </p>
             <div className="profile-links">
-              <a
-                href="https://github.com/QinwenLuo"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://github.com/QinwenLuo" target="_blank" rel="noreferrer">
                 GitHub <Arrow />
               </a>
-              <a href="#publications">Selected work ↓</a>
+              <a href="#publications">Publications ↓</a>
             </div>
-          </div>
+            <blockquote>
+              “<em>认清</em>你之<em>所是</em>，<em>成为</em>你之<em>所是</em>。”
+            </blockquote>
+          </aside>
 
-          <div className="mini-card">
-            <span>Currently exploring</span>
-            <strong>RL × Embodied Intelligence</strong>
-            <p>From learning algorithms to agents that reason and act.</p>
-          </div>
-        </aside>
+          <div className="about">
+            <p className="section-label">About</p>
+            <h2>Learning systems that reason, adapt, and act.</h2>
+            <p>
+              I am a second-year Ph.D. student in Computer Science and Technology
+              at Nanjing University of Aeronautics and Astronautics (NUAA), advised
+              by Professor{" "}
+              <a href="https://parnec.nuaa.edu.cn/huangsj/" target="_blank" rel="noreferrer">
+                Sheng-Jun Huang
+              </a>
+              . I received my M.S. degree in Computer Science from NUAA in 2025,
+              also under his supervision.
+            </p>
+            <p>
+              My research spans the foundations of reinforcement learning and its
+              practical applications. I study offline and skill-based RL, RL for
+              large models and new learning paradigms, and the connection between
+              RL and embodied intelligence—including VLA and WAM models. Together,
+              these directions ask how agents can learn reliably from imperfect
+              experience, reason about unfamiliar situations, and turn decisions
+              into effective actions.
+            </p>
 
-        <div className="content-column">
-          <header className="hero" id="about">
-            <p className="section-kicker">About me</p>
-            <h2>About Me</h2>
-            <div className="about-copy">
-              <p>
-                I am a second-year Ph.D. student in Computer Science and
-                Technology at Nanjing University of Aeronautics and
-                Astronautics (NUAA), advised by Professor{" "}
-                <a
-                  href="https://parnec.nuaa.edu.cn/huangsj/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Sheng-Jun Huang
-                </a>
-                . I received my M.S. degree in Computer Science from NUAA in
-                2025, also under his supervision.
-              </p>
-              <p>
-                My research interests span the foundations of reinforcement
-                learning algorithms and their real-world applications. I study
-                practical RL settings such as offline and skill-based RL,
-                reinforcement learning for large models and new learning
-                paradigms, and the intersection of RL with embodied
-                intelligence—including VLA and WAM models. Across these
-                directions, I aim to connect reliable learning from imperfect
-                data with agents that can reason, adapt, and act in complex
-                environments.
-              </p>
-            </div>
-            <div className="academic-timeline" aria-label="Academic background">
+            <div className="education" aria-label="Education">
               <div>
                 <span>Present</span>
-                <p><strong>Ph.D. Student</strong> · Computer Science and Technology, NUAA</p>
+                <p><strong>Ph.D. Student</strong><br />Computer Science and Technology · NUAA</p>
               </div>
               <div>
                 <span>2025</span>
-                <p><strong>M.S. in Computer Science</strong> · NUAA</p>
+                <p><strong>M.S. in Computer Science</strong><br />Nanjing University of Aeronautics and Astronautics</p>
               </div>
             </div>
-          </header>
+          </div>
+        </section>
 
-          <section className="section-block" id="research">
-            <div className="section-heading">
-              <div>
-                <p className="section-kicker">Research interests</p>
-                <h2>Questions I care about</h2>
-              </div>
-              <p>
-                From reinforcement learning foundations to large models and
-                embodied agents that operate in the real world.
-              </p>
-            </div>
-            <div className="interest-grid">
-              {interests.map((interest) => (
-                <article className="interest-card" key={interest.number}>
-                  <span>{interest.number}</span>
-                  <h3>{interest.title}</h3>
-                  <p>{interest.text}</p>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section className="section-block" id="publications">
-            <div className="section-heading publications-heading">
-              <div>
-                <p className="section-kicker">Selected publications</p>
-                <h2>Recent work</h2>
-              </div>
-              <a
-                className="text-link"
-                href="https://github.com/QinwenLuo"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View all code <Arrow />
-              </a>
-            </div>
-
-            <div className="publication-list">
-              {publications.map((publication) => (
-                <article className="publication" key={publication.title}>
-                  <div className={`paper-mark ${publication.tone}`}>
-                    <span>{publication.year}</span>
-                    <strong>{publication.short}</strong>
-                    <i />
-                  </div>
-                  <div className="paper-content">
-                    <div className="paper-meta">
-                      <span>{publication.venue}</span>
-                      <span>{publication.year}</span>
-                    </div>
-                    <h3>{publication.title}</h3>
-                    <p className="authors">{publication.authors}</p>
-                    <p className="paper-description">{publication.description}</p>
-                    <div className="paper-links">
-                      <a href={publication.paper} target="_blank" rel="noreferrer">
-                        Paper <Arrow />
-                      </a>
-                      <a href={publication.code} target="_blank" rel="noreferrer">
-                        Code <Arrow />
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section className="contact-card">
+        <section className="section" id="research">
+          <div className="section-title-row">
             <div>
-              <p className="section-kicker">Let&apos;s connect</p>
-              <h2>Interested in reliable learning systems?</h2>
+              <p className="section-label">Research</p>
+              <h2>Research Interests</h2>
             </div>
-            <a
-              href="https://github.com/QinwenLuo"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Find me on GitHub <Arrow />
-            </a>
-          </section>
-        </div>
+            <p>From algorithmic foundations to agents operating in the physical world.</p>
+          </div>
+          <div className="interest-grid">
+            {interests.map((interest, index) => (
+              <article className="interest-card" key={interest.title}>
+                <span>0{index + 1}</span>
+                <h3>{interest.title}</h3>
+                <p>{interest.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section publications-section" id="publications">
+          <div className="publication-heading">
+            <p className="section-label">Research output</p>
+            <h2>Selected Publications</h2>
+            <p>Three publication(s). Qin-Wen Luo is highlighted as the primary author.</p>
+          </div>
+
+          <div className="year-strip" aria-label="Publication years">
+            <span>Year</span>
+            <div>
+              <span>2026</span>
+              <span>2025</span>
+              <span>2024</span>
+            </div>
+            <span>Conference</span>
+          </div>
+
+          <div className="publication-list">
+            {publications.map((publication) => (
+              <article className="publication" key={publication.title}>
+                <div className="paper-topline">
+                  <span className="paper-index">[{publication.index}]</span>
+                  <span className="venue">{publication.venue}</span>
+                </div>
+                <h3>{publication.title}</h3>
+                <p className="authors">
+                  <strong>Qin-Wen Luo</strong>{publication.authors.replace("Qin-Wen Luo", "")}
+                </p>
+                <p className="paper-description">{publication.description}</p>
+                <div className="paper-footer">
+                  <div className="tags">
+                    {publication.tags.map((tag) => <span key={tag}>{tag}</span>)}
+                  </div>
+                  <div className="paper-links">
+                    <a href={publication.paper} target="_blank" rel="noreferrer">Paper <Arrow /></a>
+                    <a href={publication.code} target="_blank" rel="noreferrer">Code <Arrow /></a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
       </div>
 
       <footer>
         <p>© 2026 Qinwen Luo</p>
-        <p>Designed for clear ideas and careful research.</p>
+        <p>Reinforcement Learning · Large Models · Embodied Intelligence</p>
         <a href="#top">Back to top ↑</a>
       </footer>
     </main>
