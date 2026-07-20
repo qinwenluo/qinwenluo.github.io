@@ -3,7 +3,7 @@ title = "About"
 
 [profile]
 research_interests = [
-  "Offline & Skill-based RL",
+  "Reinforcement Learning",
   "RL for Large Models",
   "Embodied Intelligence"
 ]
