@@ -128,7 +128,7 @@ const zh: LocaleMessages = {
     send: '发送',
     sendEmail: '发送邮件',
     wechat: '微信',
-    wechatWelcome: '欢迎添加我的微信。',
+    wechatWelcome: '欢迎一起聊科研，也欢迎交个朋友。',
     close: '关闭',
     researchInterests: '研究兴趣',
     like: '点赞',
