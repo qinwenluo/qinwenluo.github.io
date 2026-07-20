@@ -75,7 +75,7 @@ const en: LocaleMessages = {
     send: 'Send',
     sendEmail: 'Send Email',
     wechat: 'WeChat',
-    wechatWelcome: 'Feel free to add me on WeChat.',
+    wechatWelcome: 'Always happy to connect, discuss research, and make new friends.',
     close: 'Close',
     researchInterests: 'Research Interests',
     like: 'Like',
