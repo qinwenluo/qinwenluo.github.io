@@ -1,4 +1,4 @@
 type = "publication"
-title = "代表性论文"
-description = "Qin-Wen Luo 为主要作者并以强调色标注。"
+title = "论文"
+description = "Qin-Wen Luo 以强调色标注；* 表示通讯作者。"
 source = "publications.bib"

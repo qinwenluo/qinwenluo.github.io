@@ -1,4 +1,4 @@
 type = "publication"
-title = "Selected Publications"
-description = "Qin-Wen Luo is highlighted as the primary author."
+title = "Publications"
+description = "Qin-Wen Luo is highlighted; * denotes the corresponding author."
 source = "publications.bib"

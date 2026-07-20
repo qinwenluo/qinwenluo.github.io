@@ -18,7 +18,7 @@ target = "about"
 href = "/"
 
 [[navigation]]
-title = "代表性论文"
+title = "论文"
 type = "page"
 target = "publications"
 href = "/publications"

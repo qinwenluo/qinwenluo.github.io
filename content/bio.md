@@ -1,7 +1,7 @@
 I am a second-year Ph.D. student in Computer Science and Technology at Nanjing University of Aeronautics and Astronautics (NUAA), advised by [Professor Sheng-Jun Huang](https://parnec.nuaa.edu.cn/huangsj/).
 
-I received my M.S. degree in Computer Science from NUAA in 2025, also under his supervision.
+My research focuses on the foundations and practical applications of reinforcement learning (RL), with an emphasis on three main areas:
 
-My research spans the foundations of reinforcement learning and its practical applications. I study offline and skill-based reinforcement learning, reinforcement learning for large models and emerging learning paradigms, and the connection between reinforcement learning and embodied intelligence, including VLA and WAM models. Across these directions, I am interested in how agents can learn reliably from imperfect experience, reason about unfamiliar situations, and act effectively in complex environments.
-
-*“认清你之所是，成为你之所是。”*
+1. **Fundamental RL algorithms**, including offline RL, offline-to-online RL, and skill-based RL.
+2. **RL for large language models (LLMs)**, particularly the use of RL to improve their reasoning capabilities.
+3. **Real-world applications of RL in embodied AI**, including RL for vision-language-action (VLA) models and world action models (WAMs).
