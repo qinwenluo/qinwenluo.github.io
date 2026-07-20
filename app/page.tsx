@@ -46,18 +46,18 @@ const publications = [
 const interests = [
   {
     number: "01",
-    title: "Offline Reinforcement Learning",
-    text: "Reliable policy learning from fixed datasets, with selective regularization and trustworthy value updates.",
+    title: "Offline & Skill-based RL",
+    text: "Reinforcement learning settings with strong potential for real-world use, including offline RL and skill-based RL.",
   },
   {
     number: "02",
-    title: "Offline-to-Online RL",
-    text: "Turning offline initialization into stable online improvement under distribution shift.",
+    title: "RL for Large Models",
+    text: "Reinforcement learning for large models, with an emphasis on effective algorithms and emerging learning paradigms.",
   },
   {
     number: "03",
-    title: "Efficient LLM Reasoning",
-    text: "Adaptive exploration and concise reasoning without sacrificing difficult-problem performance.",
+    title: "Embodied Intelligence",
+    text: "The intersection of reinforcement learning and embodied agents, including VLA and WAM models.",
   },
 ];
 
@@ -73,7 +73,7 @@ export default function Home() {
 
       <nav className="topbar" aria-label="Primary navigation">
         <a className="wordmark" href="#top" aria-label="Qinwen Luo home">
-          Q<span>L</span>
+          Qinwen Luo
         </a>
         <div className="navlinks">
           <a href="#about">About</a>
@@ -95,7 +95,7 @@ export default function Home() {
           <div className="profile-card">
             <div className="portrait-wrap">
               <Image
-                src="/profile.png"
+                src="/profile.jpg"
                 alt="Qinwen Luo"
                 className="portrait"
                 width="520"
@@ -104,12 +104,10 @@ export default function Home() {
               />
               <span className="status-dot" title="Open to research conversations" />
             </div>
-            <p className="eyebrow">Researcher</p>
+            <p className="eyebrow">Ph.D. Student</p>
             <h1>Qinwen Luo</h1>
-            <p className="role">Reinforcement Learning &amp; LLM Reasoning</p>
-            <p className="profile-note">
-              Building reliable learning systems that know when to trust,
-              explore, and adapt.
+            <p className="profile-note profile-quote">
+              “<em>认清</em>你之<em>所是</em>，<em>成为</em>你之<em>所是</em>。”
             </p>
             <div className="profile-links">
               <a
@@ -125,37 +123,50 @@ export default function Home() {
 
           <div className="mini-card">
             <span>Currently exploring</span>
-            <strong>Selective adaptation</strong>
-            <p>Across offline RL and efficient reasoning.</p>
+            <strong>RL × Embodied Intelligence</strong>
+            <p>From learning algorithms to agents that reason and act.</p>
           </div>
         </aside>
 
         <div className="content-column">
           <header className="hero" id="about">
-            <p className="section-kicker">Hello, I&apos;m Qinwen.</p>
-            <h2>
-              I work on learning systems that are
-              <em> reliable by design.</em>
-            </h2>
-            <p className="hero-copy">
-              My research spans offline reinforcement learning,
-              offline-to-online adaptation, and efficient LLM reasoning. I am
-              especially interested in how a model can adapt its behavior to
-              uncertainty and problem difficulty—conservative when needed,
-              exploratory when useful.
-            </p>
-            <div className="hero-stats" aria-label="Research highlights">
+            <p className="section-kicker">About me</p>
+            <h2>About Me</h2>
+            <div className="about-copy">
+              <p>
+                I am a second-year Ph.D. student in Computer Science and
+                Technology at Nanjing University of Aeronautics and
+                Astronautics (NUAA), advised by Professor{" "}
+                <a
+                  href="https://parnec.nuaa.edu.cn/huangsj/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Sheng-Jun Huang
+                </a>
+                . I received my M.S. degree in Computer Science from NUAA in
+                2025, also under his supervision.
+              </p>
+              <p>
+                My research interests span the foundations of reinforcement
+                learning algorithms and their real-world applications. I study
+                practical RL settings such as offline and skill-based RL,
+                reinforcement learning for large models and new learning
+                paradigms, and the intersection of RL with embodied
+                intelligence—including VLA and WAM models. Across these
+                directions, I aim to connect reliable learning from imperfect
+                data with agents that can reason, adapt, and act in complex
+                environments.
+              </p>
+            </div>
+            <div className="academic-timeline" aria-label="Academic background">
               <div>
-                <strong>3</strong>
-                <span>selected papers</span>
+                <span>Present</span>
+                <p><strong>Ph.D. Student</strong> · Computer Science and Technology, NUAA</p>
               </div>
               <div>
-                <strong>2</strong>
-                <span>research threads</span>
-              </div>
-              <div>
-                <strong>’24—’26</strong>
-                <span>recent work</span>
+                <span>2025</span>
+                <p><strong>M.S. in Computer Science</strong> · NUAA</p>
               </div>
             </div>
           </header>
@@ -167,8 +178,8 @@ export default function Home() {
                 <h2>Questions I care about</h2>
               </div>
               <p>
-                A focused agenda around reliable decisions, distribution
-                shifts, and efficient exploration.
+                From reinforcement learning foundations to large models and
+                embodied agents that operate in the real world.
               </p>
             </div>
             <div className="interest-grid">

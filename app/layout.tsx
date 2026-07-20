@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://qinwenluo.github.io"),
   title: "Qinwen Luo | Reinforcement Learning Researcher",
   description:
-    "Academic homepage of Qinwen Luo — research in offline reinforcement learning, offline-to-online adaptation, and efficient LLM reasoning.",
+    "Academic homepage of Qinwen Luo, a Ph.D. student at NUAA researching reinforcement learning, large models, and embodied intelligence.",
   authors: [{ name: "Qinwen Luo", url: "https://qinwenluo.github.io" }],
   keywords: [
     "Qinwen Luo",
@@ -16,13 +16,13 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   icons: {
-    icon: "/profile.png",
-    shortcut: "/profile.png",
+    icon: "/profile.jpg",
+    shortcut: "/profile.jpg",
   },
   openGraph: {
     title: "Qinwen Luo | Academic Homepage",
     description:
-      "Research in reliable reinforcement learning and efficient LLM reasoning.",
+      "Research in reinforcement learning, large models, and embodied intelligence.",
     url: "https://qinwenluo.github.io",
     siteName: "Qinwen Luo",
     type: "website",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Qinwen Luo | Academic Homepage",
     description:
-      "Research in reliable reinforcement learning and efficient LLM reasoning.",
+      "Research in reinforcement learning, large models, and embodied intelligence.",
     images: ["/og.png"],
   },
 };
