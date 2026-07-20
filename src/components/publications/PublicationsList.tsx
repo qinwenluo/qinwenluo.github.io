@@ -14,6 +14,7 @@ import { Publication } from '@/types/publication';
 import { PublicationPageConfig } from '@/types/page';
 import { cn } from '@/lib/utils';
 import { useMessages } from '@/lib/i18n/useMessages';
+import { getCcfRank } from '@/lib/publicationVenue';
 import FormattedBibTeXText from './FormattedBibTeXText';
 
 interface PublicationsListProps {
@@ -232,7 +233,10 @@ export default function PublicationsList({ config, publications, embedded = fals
                                         ))}
                                     </p>
                                     <p className="text-sm font-medium text-neutral-800 dark:text-neutral-600 mb-3">
-                                        {pub.journal || pub.conference} {pub.year}
+                                        <strong className="font-semibold text-primary">{pub.journal || pub.conference}</strong>{' '}
+                                        <strong className="font-semibold text-primary">
+                                            {pub.year}{getCcfRank(pub.journal || pub.conference) ? ` (${getCcfRank(pub.journal || pub.conference)})` : ''}
+                                        </strong>
                                     </p>
 
                                     {pub.description && (

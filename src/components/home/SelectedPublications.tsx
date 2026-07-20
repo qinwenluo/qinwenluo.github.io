@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Publication } from '@/types/publication';
 import { useMessages } from '@/lib/i18n/useMessages';
+import { getCcfRank } from '@/lib/publicationVenue';
 import FormattedBibTeXText from '@/components/publications/FormattedBibTeXText';
 
 interface SelectedPublicationsProps {
@@ -61,7 +62,10 @@ export default function SelectedPublications({ publications, title, enableOnePag
                             ))}
                         </p>
                         <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-2">
-                            {pub.journal || pub.conference} {pub.year}
+                            <strong className="font-semibold text-primary">{pub.journal || pub.conference}</strong>{' '}
+                            <strong className="font-semibold text-primary">
+                                {pub.year}{getCcfRank(pub.journal || pub.conference) ? ` (${getCcfRank(pub.journal || pub.conference)})` : ''}
+                            </strong>
                         </p>
                         {pub.description && (
                             <p className="text-sm text-neutral-500 dark:text-neutral-500 line-clamp-2">
