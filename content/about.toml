@@ -15,6 +15,12 @@ source = "bio.md"
 title = "About"
 
 [[sections]]
+id = "news"
+type = "list"
+source = "news.toml"
+title = "News"
+
+[[sections]]
 id = "featured_publications"
 type = "publications"
 title = "Publications"

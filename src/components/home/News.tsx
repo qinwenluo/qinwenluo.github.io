@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
 import { useMessages } from '@/lib/i18n/useMessages';
 
 export interface NewsItem {
@@ -24,14 +25,22 @@ export default function News({ items, title }: NewsProps) {
             transition={{ duration: 0.6, delay: 0.5 }}
         >
             <h2 className="text-2xl font-serif font-bold text-primary mb-4">{resolvedTitle}</h2>
-            <div className="space-y-3">
+            <ul className="space-y-3">
                 {items.map((item, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                        <span className="text-xs text-neutral-500 mt-1 w-16 flex-shrink-0">{item.date}</span>
-                        <p className="text-sm text-neutral-700">{item.content}</p>
-                    </div>
+                    <li key={index} className="flex items-start gap-3 text-sm text-neutral-700 dark:text-neutral-500">
+                        <span aria-hidden="true" className="mt-0.5 text-accent">•</span>
+                        <span className="font-semibold text-primary whitespace-nowrap">{item.date}</span>
+                        <ReactMarkdown
+                            components={{
+                                p: ({ children }) => <span>{children}</span>,
+                                strong: ({ children }) => <strong className="font-semibold text-primary">{children}</strong>,
+                            }}
+                        >
+                            {item.content}
+                        </ReactMarkdown>
+                    </li>
                 ))}
-            </div>
+            </ul>
         </motion.section>
     );
 }
