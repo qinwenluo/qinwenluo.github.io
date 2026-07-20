@@ -1,6 +1,7 @@
 [site]
 title = "Qinwen Luo"
 description = "Academic homepage of Qinwen Luo, a Ph.D. student at NUAA researching reinforcement learning, large models, and embodied intelligence."
+favicon = "/favicon.png"
 last_updated = "July 21, 2026"
 
 [author]

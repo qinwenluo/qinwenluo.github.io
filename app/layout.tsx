@@ -129,7 +129,7 @@ export default function RootLayout({
   return (
     <html lang={runtimeI18n.defaultLocale} className="scroll-smooth" suppressHydrationWarning>
       <head>
-        {config.site.favicon && <link rel="icon" href={config.site.favicon} type="image/svg+xml" />}
+        {config.site.favicon && <link rel="icon" href={config.site.favicon} type="image/png" />}
         <link rel="dns-prefetch" href="https://jialeliu.com" />
         <link rel="preconnect" href="https://jialeliu.com" crossOrigin="" />
         <link
