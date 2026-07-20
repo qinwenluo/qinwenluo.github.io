@@ -77,7 +77,7 @@ const en: LocaleMessages = {
     thanks: 'Thanks!',
   },
   home: {
-    about: 'About',
+    about: 'About Me',
     news: 'News',
     selectedPublications: 'Publications',
     viewAll: 'View All',

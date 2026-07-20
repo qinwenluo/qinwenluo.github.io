@@ -1,3 +1,15 @@
 [[news]]
+date = "2026-5"
+content = "一篇第一作者论文被 **KDD 2026**（CCF-A）接收。"
+
+[[news]]
+date = "2025-7"
+content = "一篇共同第一作者论文被 **ECAI 2025**（CCF-B）接收。"
+
+[[news]]
+date = "2025-5"
+content = "一篇第一作者论文被 **ICML 2025**（CCF-A）接收。"
+
+[[news]]
 date = "2024-10"
 content = "一篇第一作者论文被 **NeurIPS 2024**（CCF-A）接收。"
